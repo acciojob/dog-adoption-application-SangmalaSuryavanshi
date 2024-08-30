@@ -1,114 +1,30 @@
-<!DOCTYPE html>
+<form id="adoption-form">
+    <!-- Name Field -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter your name">
 
-<html>
+    <!-- Phone Number Field -->
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" placeholder="Enter your phone number">
 
-<head>
-	<title>Dog Adoption Application</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-        }
-        form {
-            max-width: 600px;
-            margin: auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        input[type="text"], select {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        input[type="checkbox"] {
-            margin-right: 10px;
-        }
-        .form-group textarea {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            height: 80px;
-        }
-        button {
-            padding: 10px 15px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-	<link rel="stylesheet" href="styles.css">
-</head>
+    <!-- Address Field -->
+    <label for="address">Address:</label>
+    <input type="text" id="address" placeholder="Enter your address">
 
-<body>
-	<!-- the entire body must be written by student -->
-	  <h1>Dog Adoption Application</h1>
-    <form action="/submit-dog-adoption" method="POST">
-        <!-- Name Field -->
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Name" required>
-        </div>
-        
-        <!-- Phone Number Field -->
-        <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="text" id="phone" name="phone" placeholder="Phone Number" required>
-        </div>
+    <!-- Checkbox for Previous Dog Experience -->
+    <label>
+        <input type="checkbox" id="checkbox" value="yes">
+        Have you lived with a dog before?
+    </label>
 
-        <!-- Address Field -->
-        <div class="form-group">
-            <label for="address">Address</label>
-            <input type="text" id="address" name="address" placeholder="Address" required>
-        </div>
+    <!-- Multi-Select Box for Preferred Breeds -->
+    <label for="multiSelect">Preferred Breeds:</label>
+    <select id="multiSelect" multiple>
+        <option value="labrador">Labrador</option>
+        <option value="bulldog">Bulldog</option>
+        <option value="poodle">Poodle</option>
+    </select>
 
-        <!-- Checkbox for Dog Experience -->
-        <div class="form-group">
-            <label>
-                <input type="checkbox" id="dog-experience" name="dog_experience">
-                Have you ever lived with a Dog before?
-            </label>
-        </div>
-
-        <!-- Multi-Select for Preferred Breeds -->
-        <div class="form-group">
-            <label for="breeds">Please select your preferred breeds</label>
-            <select id="breeds" name="breeds" multiple>
-                <option value="Labrador">Labrador</option>
-                <option value="German Shepherd">German Shepherd</option>
-                <option value="Beagle">Beagle</option>
-                <option value="Bulldog">Bulldog</option>
-                <option value="Poodle">Poodle</option>
-            </select>
-        </div>
-
-        <!-- Submit Button -->
-        <div class="form-group">
-            <button type="submit">Submit</button>
-        </div>
-    </form>
-    <script type="text/javascript" src="./script.js">
-</script>
-
-</body>
-
-</html>
+    <!-- Submit Button -->
+    <input type="submit" value="Submit">
+</form>
